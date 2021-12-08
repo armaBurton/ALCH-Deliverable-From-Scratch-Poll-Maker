@@ -3,29 +3,43 @@ export function renderPast(poll){
     pollDiv.id = `pollDiv`;
     const pastQ = document.createElement(`h3`);
     pastQ.id = `pastQ`;
+    pastQ.textContent = poll.query;
+
+    const divAnswers = renderOption(poll.answerA, poll.answerB, poll.voteCountA, poll.voteCountB);
+
+    pollDiv.prepend(pastQ, divAnswers);
+
+    return pollDiv;
+}
+
+function renderOption(aa, ab, va, vb){
+
+    const answerContainer = document.createElement(`div`);
+    answerContainer.id = `answerContainer`;
+    
     const divA = document.createElement(`div`);
     divA.id = `divA`;
+    const divB = document.createElement(`div`);
+    divB.id = `divB`;
     const AA = document.createElement(`p`);
     AA.id = `AA`;
     const VA = document.createElement(`p`);
     VA.id = `VA`;
-    const divB = document.createElement(`div`);
-    divB.id = `divB`;
-    const BA = document.createElement(`p`);
-    BA.id = `BA`;
+    const AB = document.createElement(`p`);
+    AB.id = `AB`;
     const VB = document.createElement(`p`);
     VB.id = `VB`;
 
-    pastQ.textContent = poll.query;
-    AA.textContent = poll.answerA;
-    VA.textContent = poll.voteCountA;
-    BA.textContent = poll.answerB;
-    VB.textContent = poll.voteCountB;
-
+    AA.textContent = aa;
+    VA.textContent = va;
+    AB.textContent = ab;
+    VB.textContent = vb;    
+    
     divA.append(AA, VA);
-    divB.append(BA, VB);
+    divB.append(AB, VB);
 
-    pollDiv.prepend(pastQ, divA, divB);
+    answerContainer.append(divA, divB)
+ 
+    return (answerContainer);
 
-    return pollDiv;
 }

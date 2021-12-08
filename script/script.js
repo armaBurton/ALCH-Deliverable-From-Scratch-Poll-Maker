@@ -73,21 +73,16 @@ form.addEventListener(`submit`, (e) => {
     answerB = data.get(`response-b`);
 
     displayCurrentPoll();
-    // resetPoll();
-
-    // data.set(`response-a`, '');
     resetForm();
 });
 
 closePollButton.addEventListener(`click`, () => {
-    const pastPoll = storePoll();
+    const pastPoll = makePoll();
     pastPollsArr.push(pastPoll);
-
 
     resetPoll();
     displayCurrentPoll();
-
-    displayPastPoll();
+    displayAllPolls();
 });
 
 function displayCurrentPoll(){
@@ -98,7 +93,7 @@ function displayCurrentPoll(){
     countB.textContent = voteCountB;
 }
 
-function storePoll(){
+function makePoll(){
     return {
         query,
         answerA,
@@ -116,16 +111,15 @@ function resetPoll(){
     answerB = '';
 }
 
-function displayPastPoll(){
+function displayAllPolls(){
     pastPolls.textContent = '';
 
     for (let poll of pastPollsArr){
         const holder = renderPast(poll);
-        pastPolls.append(holder);
+        pastPolls.prepend(holder);
     }
 }
 
 function resetForm(){
     document.querySelector(`form`).reset();
-
 }
