@@ -38,7 +38,7 @@ function renderOption(aa, ab, va, vb){
     divA.append(AA, VA);
     divB.append(AB, VB);
 
-    answerContainer.append(divA, divB)
+    answerContainer.append(divA, divB);
  
     return (answerContainer);
 

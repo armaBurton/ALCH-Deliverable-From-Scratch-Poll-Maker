@@ -94,6 +94,8 @@ footer {
     flex-direction: column;
     justify-content: center;
     align-items: flex-end;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
 }
 
 form{
@@ -138,6 +140,8 @@ label:last-child{
     padding-left: 10px;
     background-color: var(--ginger);
     border-left: 1px solid var(--mint);
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
 }
 
 #query-holder{

@@ -1,14 +1,10 @@
 // import functions and grab DOM elements
-import { renderPast } from "./render-utils.js";
+import { renderPast } from './render-utils.js';
 //grab incremental buttons
 const upAButton = document.querySelector(`#up-a`);
 const downAButton = document.querySelector(`#down-a`);
 const upBButton = document.querySelector(`#up-b`);
 const downBButton = document.querySelector(`#down-b`);
-
-const formQuery = document.querySelector(`#query`);
-const formAnswerA = document.querySelector(`#r-a`);
-const formAnswerB = document.querySelector(`#r-b`);
 
 //grab form
 const form = document.querySelector(`form`);
