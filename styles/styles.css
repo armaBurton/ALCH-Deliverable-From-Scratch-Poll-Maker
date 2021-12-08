@@ -1,12 +1,11 @@
-
-body {
+* {
     /* feel free to update these css variables for a quick theme */
     
-    --color1: white;
-    --color2: white;
-    --color3: white;
-    --color4: white;
-    --color5: white;
+    --teal: hsl(186, 34%, 41%);
+    --mint: hsl(180, 43%, 74%);
+    --sand: hsl(45, 51%, 69%);
+    --ginger: hsl(33, 41%, 57%);
+    --brick: hsl(11, 96%, 43%);
     
     /* https://coolors.co/generate and click export -> scss to get the colors to copy and paste below*/
         
@@ -28,8 +27,13 @@ body {
     --gutter: 30px;
     --footer-height: 25px;
     
+    margin: 0;
+    padding: 0;
     font-family: 'Titillium Web', sans-serif;
-    background-color: var(--color2);
+}
+
+body{
+    background-color: var(--sand);
 }
 
 main {
@@ -40,24 +44,10 @@ main {
     margin-bottom: calc(var(--footer-height));
 }
 
-section {
-    background-color: var(--color5);
-    max-width: 80%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding-top: var(--gutter);
-    padding-bottom: var(--gutter);
-    margin-top: var(--gutter);
-    margin-bottom: var(--gutter);
-    border: solid 2px var(--color1);
-}
-
 header {
     display: flex;
     justify-content: flex-end;
-    background-color: var(--color3);
+    background-color: var(--teal);
     height: var(--header-height);
     box-shadow: var(--shadow);
 }
@@ -76,10 +66,6 @@ header img {
     height: var(--header-height);
 }
 
-p {
-    margin: var(--gutter);
-}
-  
 footer {
     position: fixed;
     width: 100%;
@@ -87,6 +73,146 @@ footer {
     height: var(--footer-height);
     display: flex;
     justify-content: flex-end;
-    background-color: var(--color3);
+    background-color: var(--teal);
     box-shadow: var(--footer-shadow);
+    font-family: 'Titillium Web', sans-serif;
+}
+
+#current-poll-wrapper{
+    width: 834px;
+    margin-top: 50px;
+    display: flex;
+    padding-bottom: 20px;
+    border-bottom: 2px solid var(--mint);
+}
+
+.init-form{
+    background-color: var(--ginger);
+    padding: 20px;
+    padding-right: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    border-bottom: 1px solid var(--mint);
+}
+
+label{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+    margin-right: 0;
+    margin-left: auto;
+}
+
+label:last-child{
+    margin-bottom: 0;
+}
+
+#query, #r-a, #r-b{
+    margin-left: 10px;
+    width: 250px;
+}
+
+#generate-poll, #close-poll{
+    width: 100%;
+    cursor: pointer;
+}
+
+#generate-poll{
+    margin-bottom: 10px; 
+}
+
+#close-poll{
+    margin-top: 10px;
+}
+
+.reply-form{
+    padding: 20px;
+    padding-left: 10px;
+    background-color: var(--ginger);
+    border-left: 1px solid var(--mint);
+}
+
+#query-holder{
+    display: flex;
+    margin-top: 20px;
+}
+
+#query-b{
+    margin-left: 20px;
+}
+
+#query-a, #query-b{
+    width: 200px;
+}
+
+#current-query, #cq-a, #cq-b, #count-a, #count-b{
+    background-color: var(--sand);
+    padding: 3px 5px;
+}
+
+#cq-a, #cq-b{
+    width: 100%;
+    margin-right: 10px;
+}
+
+#count-a, #count-b{
+    text-align: right;
+}
+
+#response-a, #response-b{
+    display: flex;
+    justify-content: space-between;
+}
+
+h3{
+    font-size: 1rem;
+}
+
+#q-a-vote-holder, #q-b-vote-holder{
+    margin-top: 10px;
+    width: 200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#up-a, #down-a, #up-b, #down-b{
+    width: 95px;
+    cursor: pointer;
+}
+
+#past-poll-wrapper{
+    width: 834px;
+    padding-top: 10px;
+}
+
+#divA, #divB{
+    display:flex;
+}
+
+#VA, #VB{
+    margin-left: 10px;
+}
+
+#pollDiv{
+    border: 1px solid var(--brick);
+    padding: 5px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+#pollDiv:first-child{
+    margin-top: 0;
+}
+
+#pastQ{
+    text-decoration: underline;
 }
