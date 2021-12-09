@@ -47,9 +47,10 @@ main {
 header {
     display: flex;
     justify-content: flex-end;
-    background-color: var(--teal);
+    background-color: var(--ginger);
     height: var(--header-height);
     box-shadow: var(--shadow);
+    border-bottom: 1px solid var(--brick);
 }
 
 
@@ -73,15 +74,17 @@ footer {
     height: var(--footer-height);
     display: flex;
     justify-content: flex-end;
-    background-color: var(--teal);
+    background-color: var(--ginger);
     box-shadow: var(--footer-shadow);
     font-family: 'Titillium Web', sans-serif;
+    border-top: 1px solid var(--brick);
 }
 
 #current-poll-wrapper{
     width: 834px;
     margin-top: 50px;
     display: flex;
+    justify-content: center;
     padding-bottom: 20px;
     border-bottom: 2px solid var(--mint);
 }
@@ -96,6 +99,9 @@ footer {
     align-items: flex-end;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
+    border-left: 1px solid var(--brick);
+    border-top: 1px solid var(--brick);
+    border-bottom: 1px solid var(--brick);
 }
 
 form{
@@ -117,9 +123,14 @@ label:last-child{
     margin-bottom: 0;
 }
 
+input{
+    border-radius: 3px;
+    border: 1px solid var(--brick);
+}
+
 #query, #r-a, #r-b{
     margin-left: 10px;
-    width: 250px;
+    width: 230px;
 }
 
 #generate-poll, #close-poll{
@@ -142,11 +153,14 @@ label:last-child{
     border-left: 1px solid var(--mint);
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
+    border-right: 1px solid var(--brick);
+    border-top: 1px solid var(--brick);
+    border-bottom: 1px solid var(--brick);
 }
 
 #query-holder{
     display: flex;
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
 #query-b{
@@ -160,6 +174,8 @@ label:last-child{
 #current-query, #cq-a, #cq-b, #count-a, #count-b{
     background-color: var(--sand);
     padding: 3px 5px;
+    border-radius: 3px;
+    border: 1px solid var(--brick);
 }
 
 #cq-a, #cq-b{
@@ -181,7 +197,7 @@ h3{
 }
 
 #q-a-vote-holder, #q-b-vote-holder{
-    margin-top: 10px;
+    margin-top: 5px;
     width: 200px;
     display: flex;
     justify-content: space-between;
